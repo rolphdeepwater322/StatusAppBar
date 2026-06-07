@@ -1,0 +1,42 @@
+name: Release
+
+# Her "v*" tag'i push edildiğinde (örn. v1.2.0) otomatik build + release.
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write # GITHUB_TOKEN'ın release oluşturabilmesi için
+
+jobs:
+  release:
+    name: Build & Release
+    runs-on: macos-14
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Swift version
+        run: swift --version
+
+      - name: Build & package universal app
+        run: ./release.sh
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: StatusAppBar.zip
+          generate_release_notes: true
+          body: |
+            **StatusAppBar** — native macOS menu bar system monitor.
+            Universal binary (Apple Silicon + Intel) · requires macOS 14+.
+
+            ## Install
+            1. Download **StatusAppBar.zip** below and unzip it.
+            2. Move **StatusAppBar.app** to `/Applications`.
+            3. The app is ad-hoc signed (not notarized), so allow it once:
+               ```bash
+               xattr -dr com.apple.quarantine /Applications/StatusAppBar.app
+               ```
+               …then open normally (or right-click the app → **Open** → **Open**).
